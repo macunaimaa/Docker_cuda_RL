@@ -17,8 +17,8 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
  && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install -y python3-opengl libgl1-mesa-glx
-RUN apt-get update && apt-get install -y xvfb
+
+
 
 
 # Clone the repository
