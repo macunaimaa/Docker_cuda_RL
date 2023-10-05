@@ -1,3 +1,3 @@
 xhost +local:docker
-sudo docker run -it --rm \
-    cuda:1.0
+sudo docker run --gpus all -it --rm \
+    cuda_vsss:1.0
