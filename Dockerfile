@@ -1,5 +1,5 @@
 # Use an official NVIDIA CUDA base image
-FROM nvidia/cuda:12.2.0-devel-ubuntu22.04
+FROM nvidia/cuda:12.2.0-devel-ubuntu20.04
 
 
 # Set the environment variables to non-interactive (this prevents some prompts)
@@ -30,5 +30,7 @@ RUN pip install -r Requirements.txt
 RUN pip install PyOpenGL
 RUN apt-get install -y xvfb
 RUN pip install tensorflow[and-cuda]
-    
+RUN apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/7fa2af80.pub
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <KEY_ID>
+
 CMD ["/bin/bash"]
