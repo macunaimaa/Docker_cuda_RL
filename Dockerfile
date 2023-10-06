@@ -17,17 +17,15 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
  && rm -rf /var/lib/apt/lists/*
 
-
-
-
-
 # Clone the repository
-RUN git clone https://github.com/macunaimaa/RL_VSSS_PQMEC.git
+RUN git clone https://github.com/macunaimaa/RL_VSSS_PQMEC.git \
+    apt-get update && apt-get install -y python3-opengl libgl1-mesa-glx
 
 # Navigate to the repository directory
 WORKDIR /RL_VSSS_PQMEC
 
 # Install Python dependencies from requirements.txt
-RUN pip3 install -r Requirements.txt
-
+RUN pip3 install -r Requirements.txt \
+    pip install tensorflow-gpu
+    
 CMD ["/bin/bash"]
