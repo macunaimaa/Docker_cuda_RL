@@ -22,14 +22,13 @@ RUN git clone https://github.com/macunaimaa/RL_VSSS_PQMEC.git
 
 RUN apt-get update && apt-get install -y python3-pip
 
-RUN pip3 install PyOpenGL
-RUN apt-get install -y xvfb
-
 # Navigate to the repository directory
 WORKDIR /RL_VSSS_PQMEC
 
 # Install Python dependencies from requirements.txt
-RUN pip3 install -r Requirements.txt
+RUN pip install -r Requirements.txt
+RUN pip install PyOpenGL
+RUN apt-get install -y xvfb
 RUN pip install tensorflow[and-cuda]
     
 CMD ["/bin/bash"]
