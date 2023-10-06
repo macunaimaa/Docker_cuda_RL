@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 # Clone the repository
-RUN git clone https://github.com/macunaimaa/RL_VSSS_PQMEC.git / RUN apt-get update && apt-get upgrade -y
+RUN git clone https://github.com/macunaimaa/RL_VSSS_PQMEC.git
 
 RUN apt-get install -y Python3-opengl xvfb
 
