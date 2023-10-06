@@ -24,6 +24,7 @@ RUN git clone https://github.com/macunaimaa/RL_VSSS_PQMEC.git
 WORKDIR /RL_VSSS_PQMEC
 
 # Install Python dependencies from requirements.txt
-RUN pip3 install -r Requirements.txt tensorflow-gpu
+RUN pip3 install -r Requirements.txt
+RUN pip install tensorflow-gpu
     
 CMD ["/bin/bash"]
