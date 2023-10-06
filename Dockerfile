@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
 # Clone the repository
 RUN git clone https://github.com/macunaimaa/RL_VSSS_PQMEC.git
 
-RUN apt-get install -y Python3-opengl xvfb
+RUN apt-get install -y python3-opengl xvfb
 
 # Navigate to the repository directory
 WORKDIR /RL_VSSS_PQMEC
