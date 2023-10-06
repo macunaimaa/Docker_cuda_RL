@@ -18,8 +18,7 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 # Clone the repository
-RUN git clone https://github.com/macunaimaa/RL_VSSS_PQMEC.git \
-    apt-get update && apt-get install -y python3-opengl libgl1-mesa-glx
+RUN git clone https://github.com/macunaimaa/RL_VSSS_PQMEC.git
 
 # Navigate to the repository directory
 WORKDIR /RL_VSSS_PQMEC
