@@ -25,6 +25,6 @@ WORKDIR /RL_VSSS_PQMEC
 
 # Install Python dependencies from requirements.txt
 RUN pip3 install -r Requirements.txt
-RUN pip install tensorflow-gpu
+RUN pip install tensorflow[and-cuda]
     
 CMD ["/bin/bash"]
